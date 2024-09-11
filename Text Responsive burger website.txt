@@ -46,16 +46,16 @@ Most Devoured <br> Burgers
 
 .popular__title .popular__price
 Chicken <br> Burger
-$6
+ksh 1200
 
 Meat <br> Burger
-$10
+ksh 1500
 
 Grill <br> Burger
-$12
+ksh 1700
 
 Classic <br> Burger
-$8
+ksh 1200
 
 Big <br> Burger
 $15

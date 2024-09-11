@@ -379,6 +379,24 @@ img {
   place-items: center;
 }
 
+.recipe__box img{
+  width: 50px;
+  filter: var(--shadow-small-img);
+}
+
+.recipe__title{
+  font-size: var(--normal-font-size);
+  margin-bottom: .5rem;
+}
+
+.recipe__description{
+  font-size: var(--small-font-size);
+}
+
+.recipe__card:nth-child(even) .recipe__box{
+  order: 1;
+}
+
 /*=============== POPULAR ===============*/
 
 
