@@ -58,7 +58,7 @@ Classic <br> Burger
 ksh 1200
 
 Big <br> Burger
-$15
+ksh 1900
 
 
 ========== DELIVERY ==========
@@ -82,9 +82,9 @@ Contact Now
 Write Us
 
 .contact__social
-https://api.whatsapp.com/send?phone=51123456789&text=Hello, more information!
-https://m.me/bedimcode
-https://t.me/telegram
+https://motown_burgers.whatsapp.com/send?phone=51123456789&text=Hello, more information!
+https://motown_burgers/facebook
+https://motown_burgers/instagram
 
 Call Us and Order
 +00-987-7654-321 <br>
