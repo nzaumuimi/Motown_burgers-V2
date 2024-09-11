@@ -453,6 +453,10 @@ img {
   cursor: pointer;
 }
 
+.popular__card:hover .popular__img{
+  transform: translateY(-.5rem);
+  }
+
 
 
 
