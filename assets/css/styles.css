@@ -165,7 +165,7 @@ img {
 @media screen and (max-width: 1150px){
   .nav__menu{
     position: fixed;
-    top: 100%;
+    top: -100%;
     left: 0;
     background-color: var(--body-color);
     width: 100%;
@@ -190,7 +190,7 @@ img {
 
 .nav__link::after{
   content: '';
-  width: 0;
+  width: 60%;
   height: 3px;
   background-color: var(--first-color);
   position: absolute;
