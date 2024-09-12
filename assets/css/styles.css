@@ -697,6 +697,150 @@ img {
 }
 
 /* For medium devices */
+@media screen and (min-width: 540px){
+  .home__container{
+  .delivery__container
+    grid-template-columns: 360px;
+    justify-content: center;
+  }
 
+  .recipe__img{
+    position: initial;
+  }
+  .recipe__container{
+    grid-template-columns: 200px 230px;
+    justify-content: center;
+    column-gap: 3rem;
+  }
 
-/* For large devices */
+  .popular__container{
+    grid-template-columns: repeat(2, 160px);
+    justify-content: center;
+  }
+
+  .contact{
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 768px){
+  .popular__container{
+    grid-template-columns: repeat(3, 160px);
+  }
+
+  .footer__social{
+    grid-column: initial;
+  }
+  .footer__content{
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+  }
+  .footer__link:nth-child(1){
+    justify-self: start;
+  }
+  .footer__link:nth-child(2){
+    order: 2;
+    justify-self: end;
+  }
+}
+
+  /* For large devices */
+  @media screen and (min-width: 1150px){
+    .container{
+      margin-inline: auto;
+    }
+
+    .section{
+      padding-block: 7rem 2rem;
+    }
+    .section__title{
+      margin-bottom: 4.5rem;
+    }
+
+    .nav{
+      height: calc(var(--header-height) + 2rem);
+    }
+    .nav__toggle,
+    .nav__close{
+      display: none;
+    }
+    .nav__list{
+      flex-direction: row;
+      column-gap: 4rem;
+    }
+
+    .home__container{
+      grid-template-columns: 430px 605px;
+      align-items: center;
+      column-gap: 4rem;
+      padding-block: 7rem 4rem;
+    }
+    .home__data{
+      text-align: initial;
+    }
+    .home__description{
+      margin-bottom: 3.5rem;
+      padding-right: 3rem;
+    }
+    .home__sticker{
+      width: 60px;
+      right: 10rem;
+      bottom: 1rem;
+    }
+    .home__burger{
+      width: 490px;
+    }
+    .home__dish{
+      width: 560px;
+      bottom: -4rem;
+    }
+    .home__ingridient{
+      width: 100px;
+    }
+    .home__potato-1{
+      left: -2rem;
+      top: 1.5rem;
+    }
+    .home__potato-2{
+      right: -1.5rem;
+      bottom: -3rem;
+    }
+    .home__tomato-1{
+      width: 70px;
+      top: -1.5rem;
+      right: 10rem;
+    }
+    .home__tomato-2{
+      width: 70px;
+      left: 9.5rem;
+      bottom: -2.5rem;
+    }
+    .home__lettuce-1{
+      top: 4rem;
+      right: -3.5rem;
+    }
+    .home__lettuce-2{
+      left: -3.5rem;
+      bottom: 2rem;
+    }
+
+    .recipe__container{
+      grid-template-columns: 350px 300px;
+      column-gap: 8rem;
+      padding-bottom: 3rem;
+    }
+    .recipe__img{
+      width: 350px;
+    }
+    .recipe__card{
+      column-gap: 1rem;
+    }
+    .recipe__box{
+      width: 100px;
+      height: 100px;
+      border-radius: 1.25rem;
+      border-width: 5px;
+    }
+
+  }
