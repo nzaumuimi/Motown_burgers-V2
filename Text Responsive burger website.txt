@@ -48,10 +48,10 @@ Most Devoured <br> Burgers
 Chicken <br> Burger
 ksh 1200
 
-Meat <br> Burger
+Beef <br> Burger
 ksh 1500
 
-Grill <br> Burger
+Bacon <br> Burger
 ksh 1700
 
 Classic <br> Burger
