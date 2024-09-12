@@ -162,17 +162,15 @@ img {
 }
 
 /* Navigation for mobile devices */
-@media screen and (max-width: 1150px){
-  .nav__menu{
-    position: fixed;
-    top: -100%;
-    left: 0;
-    background-color: var(--body-color);
-    width: 100%;
-    padding-block: 4.5rem 3.5rem;
-    box-shadow: 0 4px 16px hsla(22, 100%, 8%, .2);
-    transition: top .4s;
-  }
+.nav__menu{
+  position: fixed;
+  top: -100%;
+  left: 0;
+  background-color: var(--body-color);
+  width: 100%;
+  padding-block: 4.5rem 3.5rem;
+  box-shadow: 0 4px 16px hsla(22, 100%, 8%, .2);
+  transition: top .4s;
 }
 
 .nav__list{
@@ -218,7 +216,6 @@ img {
 .shadow-header{
   box-shadow: 0 4px 16px hsla(22, 100%, 8%, .1);
 }
-
 
 /* Active link */
 
