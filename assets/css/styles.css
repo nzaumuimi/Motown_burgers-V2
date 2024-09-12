@@ -218,6 +218,9 @@ img {
 }
 
 /* Active link */
+.active-link::after{
+  width: 60%;
+}
 
 /*=============== HOME ===============*/
 .home__container{
@@ -631,14 +634,67 @@ img {
 }
 
 /*=============== SCROLL UP ===============*/
+.scrollup{
+  position: fixed;
+  right: 1rem;
+  bottom: -50%;
+  background-color: var(--body-color);
+  box-shadow: 0 4px 16px hsla(22, 100%, 8%, .2);
+  color: var(--title-color);
+  display: inline-flex;
+  padding: 6px;
+  font-size: 1.25rem;
+  border-radius: .35rem;
+  z-index: var(--z-tooltip);
+  transition: bottom .4s, transform .4s;
+}
 
+.scrollup:hover{
+  transform: translateY(-.5rem);
+}
 
 /* Show Scroll Up */
+.show-scroll{
+  bottom: 3rem;
+}
 
 
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
+.container{
+  margin-inline: 1rem;
+}
 
+.home__title{
+  font-size: 2.5rem;
+}
+.home__burger{
+  width: 210px;
+}
+.home__dish{
+  width: 250px;
+  bottom: -2rem;
+}
+
+.recipe__container{
+  column-gap: 5rem;
+  }
+.recipe__img{
+  left: -8rem;
+}
+
+.popular__container{
+  grid-template-columns: 160px;
+  justify-content: center;
+}
+
+.footer__social{
+  grid-column: 1;
+}
+.footer__content{
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
 
 /* For medium devices */
 
