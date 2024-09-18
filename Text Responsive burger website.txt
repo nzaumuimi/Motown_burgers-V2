@@ -11,33 +11,34 @@ Home - Recipe - Popular - Delivery - Contact
 Love Every <br> Burger
 
 .home__description
-We serve the best burgers on the planet, 
-paving the way for cooking and preparing 
-hot, delicious burgers.
+Welcome to Motown Burgers an inviting space 
+Where the aroma of sizzling patties fills the air.
+We pride ourselves on serving gourmet burgers 
+Made from the freshest ingredients.
 
 .button
-Bite Now
+Order Now
 
 
 ========== RECIPE ==========
 .section__title
-Our Secret Recipe
+Recipe
 
 .recipe__title .recipe__description
 Bread
-Fresh bread, baked to perfection.
+Hand made bread, freshly baked to perfection.
 
 Cheese
-Cheese for a fantastic and healthy future.
+Cheese of different flavours for a healthy and fantastic future.
 
 Meat
-100% pure beef, big and meaty.
+21 days purely aged borana beef, succulent and tasty.
 
 Vegetables
-Vegetables full of the essence of nature and organic.
+Fresh organic vegetable toppings.
 
 Sauces
-Fresh sauces, delicious for the palate.
+Fresh sauces, delicious dips irresistible for the palate.
 
 
 ========== POPULAR ==========
@@ -46,19 +47,19 @@ Most Devoured <br> Burgers
 
 .popular__title .popular__price
 Chicken <br> Burger
-ksh 1200
+sh 1200
 
 Beef <br> Burger
-ksh 1500
+sh 1500
 
 Bacon <br> Burger
-ksh 1700
+sh 1700
 
 Classic <br> Burger
-ksh 1200
+sh 1200
 
 Gril <br> Burger
-ksh 1900
+sh 1900
 
 
 ========== DELIVERY ==========
@@ -82,7 +83,7 @@ Contact Now
 Write Us
 
 .contact__social
-https://motown_burgers.whatsapp.com/send?phone=51123456789&text=Hello, more information!
+https://api.whatsapp.com/send?phone=51123456789&text=Hello, more information!
 https://motown_burgers/facebook
 https://motown_burgers/instagram
 

@@ -213,6 +213,7 @@ img {
 }
 
 .nav__close{
+  position: absolute;
   top: 1rem;
   right: 1.5rem;
 }
@@ -222,6 +223,15 @@ img {
   top: 0;
 }
 
+/* Add shadow header */
+.shadow-header{
+  box-shadow: 0 4px 16px hsla(22, 100%, 8%, .2);
+}
+
+/* Active link */
+.active-link::after{
+  width: 60%;
+}
 
 /*=============== HOME ===============*/
 .home__container{
@@ -399,56 +409,64 @@ img {
 }
 
 /*=============== POPULAR ===============*/
-<section class="popular section" id="popular">
-    <h2 class="section__title">Most Gobbled <br> Burgers</h2>
+.popular{
+  background-color: 2rem;
+}
 
-    <div class="popular__container container grid">
-        <article class="popular__card">
-            <img src="assets/img/popular-burger-chicken.png" alt="Chicken Burger" class="popular__img popular-burger-chicken">
-            <h2 class="popular__title">Chicken <br> Burger</h2>
-            <span class="popular__price">ksh 1,200</span>
-            <button class="popular__button">
-                <i class="ri-shopping-bag-3-fill"></i>
-            </button>
-        </article>
+.popular__container{
+  padding-block: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3.5rem 1.5rem;
+}
 
-        <article class="popular__card">
-            <img src="assets/img/popular-burger-meat.png" alt="Meat Burger" class="popular__img popular-burger-meat">
-            <h2 class="popular__title">Meat <br> Burger</h2>
-            <span class="popular__price">ksh 1,500</span>
-            <button class="popular__button">
-                <i class="ri-shopping-bag-3-fill"></i>
-            </button>
-        </article>
+.popular__card{
+  position: relative;
+  background-color: var(--first-color);
+  padding: 6rem .75rem 1rem;
+  border-radius: 1rem;
+  border: 4px solid var(--container-color);
+}
 
-        <article class="popular__card">
-            <img src="assets/img/popular-burger-grill.png" alt="Grill Burger" class="popular__img popular-burger-grill">
-            <h2 class="popular__title">Grill <br> Burger</h2>
-            <span class="popular__price">ksh 1,700</span>
-            <button class="popular__button">
-                <i class="ri-shopping-bag-3-fill"></i>
-            </button>
-        </article>
+.popular__img{
+  position: absolute;
+  top: -2rem;
+  left: 0;
+  right: 0;
+  width: 120px;
+  margin: 0 auto;
+  filter: var(--shadow-small-img);
+  transition: transform .4s;
+}
 
-        <article class="popular__card">
-            <img src="assets/img/popular-burger-classic.png" alt="Classic Burger" class="popular__img popular-burger-classic">
-            <h2 class="popular__title">Classic <br> Burger</h2>
-            <span class="popular__price">ksh 1,200</span>
-            <button class="popular__button">
-                <i class="ri-shopping-bag-3-fill"></i>
-            </button>
-        </article>
+.popular__title{
+  font-size: var(--normal-font-size);
+  margin-bottom: .75rem;
+}
 
-        <article class="popular__card">
-            <img src="assets/img/popular-burger-big.png" alt="Big Burger" class="popular__img popular-burger-big">
-            <h2 class="popular__title">Big <br> Burger</h2>
-            <span class="popular__price">ksh 1,900</span>
-            <button class="popular__button">
-                <i class="ri-shopping-bag-3-fill"></i>
-            </button>
-        </article>
-    </div> 
-</section>
+.popular__price{
+  color: var(--title-color);
+  font-family: var(--second-font);
+  font-size: var(--h2-font-size);
+}
+
+.popular__button{
+  position: absolute;
+  right: .75rem;
+  bottom: 1rem;
+  outline: none;
+  border: none;
+  background-color: var(--second-color);
+  color: var(--white-color);
+  padding 6px;
+  border-radius: .5rem;
+  font-size: 1.25rem;
+  display: inline-flex;
+  cursor: pointer;
+}
+
+.popular__card:hover .popular__img{
+  transform: translateY(-.5rem);
+}
 
 /*=============== DELIVERY ===============*/
 .delivery__container{
@@ -468,7 +486,7 @@ img {
   margin-bottom: 2rem;
 }
 
-.deliver__sticker{
+.delivery__sticker{
   width: 30px;
   rotate: 15deg;
   position: absolute;
@@ -487,9 +505,10 @@ img {
 .contact__container {
   position: relative;
   background-color: var(--second-color); 
-  padding-top: 3.5rem;
+  padding-top: 3.5rem 1rem;
   border-radius: 3rem;
-  overflow: hidden; 
+  overflow: hidden;
+  text-align: center; 
 }
 
 .contact__content {
@@ -659,7 +678,6 @@ img {
   bottom: 3rem;
 }
 
-
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
 .container{
@@ -685,7 +703,7 @@ img {
 }
 
 .popular__container{
-  grid-template-columns: 160px;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   justify-content: center;
 }
 
@@ -699,8 +717,8 @@ img {
 
 /* For medium devices */
 @media screen and (min-width: 540px){
-  .home__container{
-  .delivery__container
+  .home__container,
+  .delivery__container{
     grid-template-columns: 360px;
     justify-content: center;
   }
@@ -880,7 +898,7 @@ img {
     }
 
     .delivery__container{
-      grid-template-columns: 440px 550;
+      grid-template-columns: 440px 550px;
       column-gap: 4rem;
       align-items: center;
       padding-block: 1rem;
@@ -904,47 +922,115 @@ img {
     .contact{
       max-width: initial;
     }
-    .contact__container{
-      border-radius: 4rem;
-      padding-block: 4rem 6.5rem;
-    }
-    .contact__content{
-      grid-template-columns: 420px 435px;
-      justify-content: center;
-      column-gap: 6.5rem;
-    }
-    .contact__data{
-      grid-template-columns: repeat(2, max-content);
-      text-align: initial;
-      gap: 4.5rem 2rem;
-      order: 1;
-    }
-    .contact__social{
-      justify-content: initial;
-    }
-    .contact__title{
-      margin-bottom: 1rem;
-    }
-    .contact__image{
+    .contact__container {
       position: relative;
+      background-color: var(--second-color);
+      border-radius: 4rem;
+      padding: 4rem 2rem 6.5rem;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    
+    .contact__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 3rem;
+      max-width: 800px;
       width: 100%;
     }
-    .contact__img{
-      width: 420px;
+    
+    .contact__container .section__title,
+    .contact__title,
+    .contact__info {
+      color: var(--white-color);
+    }
+    
+    .contact__data {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+    }
+    
+    .contact__title {
+      font-size: var(--h2-font-size);
+      margin-bottom: 0.75rem;
+    }
+    
+    .contact__social {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+    
+    .contact__social a {
+      width: 32px;
+      height: 32px;
+      background-color: var(--first-color);
+      color: var(--second-color);
+      font-size: 1.5rem;
+      border-radius: 0.5rem;
+      display: grid;
+      place-items: center;
+      transition: transform 0.4s;
+    }
+    
+    .contact__social a:hover {
+      transform: translateY(-0.25rem);
+    }
+    
+    .contact__info {
+      font-style: normal;
+    }
+    
+    .contact__image {
+      display: flex;
+      justify-content: center;
+    }
+    
+    .contact__img {
+      width: 280px;
+      max-width: 100%;
+    }
+    
+    .contact__sticker-1,
+    .contact__sticker-2 {
       position: absolute;
-      top: -2.5rem;
+      opacity: 0.5;
     }
-    .contact__sticker-1{
-      width: 70px;
-      left: 27rem;
-      top: 10rem;
-    }
-    .contact__sticker-2{
+    
+    .contact__sticker-1 {
       width: 40px;
-      right: 10rem;
-      bottom: 5.5rem;
+      top: 6.5rem;
+      left: 1.5rem;
     }
-
+    
+    .contact__sticker-2 {
+      width: 30px;
+      right: 3rem;
+      bottom: 12rem;
+    }
+    
+    @media screen and (min-width: 768px) {
+      .contact__container {
+        padding: 5rem 2rem 7.5rem;
+      }
+      
+      .contact__content {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      
+      .contact__data {
+        align-items: flex-start;
+        text-align: left;
+      }
+    }
+        
     .footer{
       padding-block: 5rem 3rem;
     }
