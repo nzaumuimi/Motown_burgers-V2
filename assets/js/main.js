@@ -71,5 +71,49 @@ const scrollActive = () => {
 
 window.addEventListener('scroll', scrollActive);
 
-
 /*=============== SCROLL REVEAL ANIMATION ===============*/
+const sr = ScrollReveal({ // Ensure the ScrollReveal library is properly included
+    origin: 'top',
+    distance: '60px',
+    duration: 2500,
+    delay: 300,
+    reset: true, // Animations repeat
+});
+
+// Reveal animations for different elements
+sr.reveal('.home__data');
+sr.reveal('.home__dish', {
+    delay: 500,
+    distance: '100px',
+    origin: 'bottom'
+});
+sr.reveal('.home__burger', {
+    delay: 1200,
+    distance: '100px',
+    duration: 1500
+});
+sr.reveal('.home__ingredient', { // Fixed typo from 'home__ingridient' to 'home__ingredient'
+    delay: 1600,
+    interval: 100
+});
+sr.reveal('.recipe__img', { 
+    origin: 'left' // Corrected syntax
+});
+sr.reveal('.delivery__img', { // Fixed missing quote
+    origin: 'left'
+});
+sr.reveal('.contact__image', { // Fixed missing quote
+    origin: 'left'
+});
+sr.reveal('.recipe__data', { 
+    origin: 'right'
+});
+sr.reveal('.delivery__data', { 
+    origin: 'right'
+});
+sr.reveal('.contact__data', { 
+    origin: 'right'
+});
+sr.reveal('.popular__card', { 
+    interval: 100
+});

@@ -57,7 +57,7 @@ ksh 1700
 Classic <br> Burger
 ksh 1200
 
-Big <br> Burger
+Gril <br> Burger
 ksh 1900
 
 

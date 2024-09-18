@@ -117,25 +117,27 @@ img {
 }
 
 /*=============== HEADER & NAV ===============*/
-.header{
+.header {
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
   background-color: var(--body-color);
   z-index: var(--z-fixed);
-  transition: box-shadow .4s;
+  transition: box-shadow 0.4s ease-in-out; /* Added ease-in-out for smoother transition */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a default box-shadow */
 }
 
-.nav{
+.nav {
   position: relative;
   height: var(--header-height);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 1rem; /* Added padding for better alignment */
 }
 
-.nav__logo{
+.nav__logo {
   display: flex;
   align-items: center;
   column-gap: 5rem;
@@ -143,58 +145,67 @@ img {
   color: var(--title-color);
 }
 
-.nav__logo img{
+.nav__logo img {
   width: 20px;
+  height: auto; /* Ensures aspect ratio is maintained */
 }
 
-.nav__logo div{
+.nav__logo div {
   background-color: var(--first-color);
   padding: 6px;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
 }
 
 .nav__toggle,
-.nav__close{
+.nav__close {
   display: flex;
   font-size: 1.5rem;
   color: var(--title-color);
-  cursor: pointer;
+  cursor: pointer; /* Ensures that the pointer cursor appears */
+}
+
+.nav__toggle:hover,
+.nav__close:hover {
+  color: var(--highlight-color); /* Optional: Add a hover effect */
 }
 
 /* Navigation for mobile devices */
-.nav__menu{
-  position: fixed;
-  top: -100%;
-  left: 0;
-  background-color: var(--body-color);
-  width: 100%;
-  padding-block: 4.5rem 3.5rem;
-  box-shadow: 0 4px 16px hsla(22, 100%, 8%, .2);
-  transition: top .4s;
+@media screen and (max-width: 1150px){
+  .nav__menu {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    background-color: var(--body-color);
+    width: 100%;
+    padding-block: 4.5rem 3.5rem; /* Adjusted padding for better spacing */
+    box-shadow: 0 4px 16px hsla(22, 100%, 8%, 0.2);
+    transition: top 0.4s ease-in-out; /* Added ease-in-out for smoother transition */
+  }
 }
 
-.nav__list{
+.nav__list {
   text-align: center;
   display: flex;
   flex-direction: column;
   row-gap: 2rem;
 }
 
-.nav__link{
+.nav__link {
   position: relative;
   color: var(--title-color);
   font-family: var(--second-font);
+  text-decoration: none; /* Ensure links are not underlined */
 }
 
-.nav__link::after{
+.nav__link::after {
   content: '';
   width: 0;
   height: 3px;
   background-color: var(--first-color);
   position: absolute;
   left: 0;
-  bottom: -.5rem;
-  transition: width .3s;
+  bottom: -0.5rem;
+  transition: width 0.3s ease; /* Added ease for smoother transition */
 }
 
 .nav__link:hover::after{
@@ -202,7 +213,6 @@ img {
 }
 
 .nav__close{
-  position: absolute;
   top: 1rem;
   right: 1.5rem;
 }
@@ -212,15 +222,6 @@ img {
   top: 0;
 }
 
-/* Add shadow header */
-.shadow-header{
-  box-shadow: 0 4px 16px hsla(22, 100%, 8%, .1);
-}
-
-/* Active link */
-.active-link::after{
-  width: 60%;
-}
 
 /*=============== HOME ===============*/
 .home__container{
@@ -842,5 +843,118 @@ img {
       border-radius: 1.25rem;
       border-width: 5px;
     }
+    .recipe__box img{
+      width: 85px;
+    }
+    .recipe__title{
+      font-size: var(--h3-font-size);
+    }
+    .recipe__description{
+      font-size: var(--normal-font-size);
+    }
 
-  }
+    .popular__container{
+      grid-template-columns: repeat(3, 250px);
+      gap: 6.5rem 4rem;
+      padding-block: 3rem;
+    }
+    .popular__card{
+      padding: 9.5rem 1.25rem 1.25rem;
+      border-radius: 2rem;
+      border-width: 6px;
+    }
+    .popular__img{
+      width: 200px;
+      top: -3.5rem;
+    }
+    .popular__title{
+      font-size: var(--h2-font-size);
+    }
+    .popular__price{
+      font-size: var(--h1-font-size);
+    }
+    .popular__button{
+      font-size: 1.5rem;
+      right: 1.25rem;
+      bottom: 1.25rem;
+    }
+
+    .delivery__container{
+      grid-template-columns: 440px 550;
+      column-gap: 4rem;
+      align-items: center;
+      padding-block: 1rem;
+    }
+    .delivery__container .section__title,
+    .deliver__data{
+      text-align: initial;
+    }
+    .delivery__description{
+      margin-bottom: 3.5rem;
+    }
+    .delivery__sticker{
+      width: 50px;
+      right: 8rem;
+      bottom: 0;
+    }
+    .delivery__img{
+      width: 550px;
+    }
+
+    .contact{
+      max-width: initial;
+    }
+    .contact__container{
+      border-radius: 4rem;
+      padding-block: 4rem 6.5rem;
+    }
+    .contact__content{
+      grid-template-columns: 420px 435px;
+      justify-content: center;
+      column-gap: 6.5rem;
+    }
+    .contact__data{
+      grid-template-columns: repeat(2, max-content);
+      text-align: initial;
+      gap: 4.5rem 2rem;
+      order: 1;
+    }
+    .contact__social{
+      justify-content: initial;
+    }
+    .contact__title{
+      margin-bottom: 1rem;
+    }
+    .contact__image{
+      position: relative;
+      width: 100%;
+    }
+    .contact__img{
+      width: 420px;
+      position: absolute;
+      top: -2.5rem;
+    }
+    .contact__sticker-1{
+      width: 70px;
+      left: 27rem;
+      top: 10rem;
+    }
+    .contact__sticker-2{
+      width: 40px;
+      right: 10rem;
+      bottom: 5.5rem;
+    }
+
+    .footer{
+      padding-block: 5rem 3rem;
+    }
+    .footer__container{
+      row-gap: 3.5rem;
+    }
+    .footer__copy{
+      margin-top: 4rem;
+    }
+    .scrollup{
+      right: 3rem;
+    }
+}
